@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ملفي الشخصي - مطور ويب متكامل يعرض المشاريع والخبرة العملية وحلول مبتكرة." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <title>شيماء</title>
+  <link rel="icon" href="img/shaima48x48.svg" type="image/svg+xml" />
+  <link rel="icon" href="img/shaima150x150.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="img/shaima100x100.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loader" aria-hidden="true"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="navbar" aria-label="التنقل الرئيسي">
+      <a href="#" class="nav-logo"><img src="img/shaima80x80.svg" alt="logo"></a>
+      <!-- Menu will slide from right -->
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#about" class="nav-link">من أنا</a>
+        </li>
+        <li class="nav-item">
+          <a href="#education" class="nav-link">تعليمي</a>
+        </li>
+        <li class="nav-item">
+          <a href="#experience" class="nav-link">خبرتي</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">مشاريعي</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">تواصل معي</a>
+        </li>
+      </ul>
+      <div class="hamburger" aria-label="تبديل القائمة">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1 class="hero-title fade-in welcome-text" style="animation-delay: 0.2s;">مرحبا بكم في ملفي الشخصي</h1>
+        <p class="hero-subtitle fade-in">معك شيماء <span id="job-title"></span></p>
+        <div class="hero-buttons fade-in" style="animation-delay: 0.4s;">
+          <a href="#projects" class="btn-primary">مشاريعي</a>
+          <a href="#contact" class="btn-primary">تواصل معي</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="section-title fade-in">من أنا</h2>
+        <p class="section-subtitle fade-in">شغوفة بدمج البرمجة والتحليل والتقنية لابتكار حلول وتجارب رقمية</p>
+        <div class="about-grid">
+          <div class="about-text slide-in-left fade-in">
+            <p>
+              مطوّرة ويب ومحلّلة بيانات شغوفة بتعلّم كل جديد. أؤمن أن التعليم، والتجربة، والمشاركة هي مفاتيح حقيقية
+              لصناعة التغيير في المجتمع. أستمتع بخوض التحديات البرمجية وحلّها ذاتيًا، وأسعى دائمًا إلى تطوير مهاراتي
+              وإبراز أفضل ما لدي.
+
+              أطمح لأن أصبح عالمة بيانات تترك أثرًا ملموسًا في هذا المجال، وفي مجالات أخرى. أحب التفكير
+              العميق، ومشاركة المعرفة، وصنع فرق حقيقي في حياة من حولي. أؤمن بأهمية المصادر المفتوحة، وأتمنى أن أكون من
+              بين المساهمين في تحسينها وتوسيع أثرها.
+
+              وأرى نفسي "خوازمية" تجمع بين دقة الرياضيات وروح البرمجة، بعقلية تحليليّة وإبداعية تسعى دائمًا لحلول فعالة
+              ومبتكرة.
+
+
+            </p>
+
+          </div>
+          <div class="about-visual slide-in-right fade-in">
+            <div class="floating-shape" aria-hidden="true"></div>
+            <div class="floating-shape" aria-hidden="true"></div>
+            <div class="floating-shape" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+      <div class="container">
+        <h2 class="section-title fade-in">تعليمي</h2>
+        <p class="section-subtitle fade-in">رحلتي الأكاديمية</p>
+        <div class="timeline education-timeline">
+          <div class="timeline-item fade-in education-item" style="animation-delay: 0.2s;">
+            <div class="timeline-content education-content-box">
+              <h3>ماجستير علوم البيانات وتحليلها</h3>
+              <span>جامعة جدة | 2024 - 2026</span>
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  اكتسبت خبرة واسعة في الإحصاءات والتقنيات الكمية، التي تُعدّ أساسًا لتحليل البيانات واتخاذ قرارات دقيقة
+                  مبنية على الأدلة، مما يساعد في التنبؤ بالمستقبل وتقليل المخاطر.
+                </p>
+              </div>
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  تعلمت كيفية إعداد البيانات ومعالجتها لتنظيف وتنظيم وتحويل البيانات الخام إلى صيغة مناسبة للتحليل، مما
+                  يسهم في تحسين دقة القرارات.
+                </p>
+              </div>
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  استخدام التعلم الآلي لبناء نماذج تنبؤية تتيح اتخاذ قرارات تلقائية من خلال تحليل البيانات واكتشاف
+                  الأنماط.
+                </p>
+              </div>
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  العمل مع البيانات الضخمة لتحليل كميات هائلة ومتنوعة من البيانات بسرعة عالية، واستخلاص رؤى دقيقة تدعم
+                  اتخاذ القرار في الوقت الفعلي.
+                </p>
+              </div>
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  فهم وتطبيق تقنيات معالجة اللغة الطبيعية (NLP) التي تساعد الحواسيب على تفسير وتحليل اللغة البشرية
+                  المكتوبة والمنطوقة لتحسين التفاعل بين الإنسان والآلة.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item fade-in education-item" style="animation-delay: 0.4s;">
+            <div class="timeline-content education-content-box">
+              <h3>بكالوريوس الرياضيات</h3>
+              <span>جامعة جدة | 2015 - 2020</span>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  تعلمت المعادلات التفاضلية والتكاملية، التي تُستخدم في وصف التغيرات الديناميكية والنماذج الفيزيائية
+                  والهندسية، وتحليل الظواهر المستمرة في الزمن أو المكان.
+                </p>
+              </div>
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  تعلمت التحليل العددي لتقريب حلول المعادلات الرياضية والمشكلات التي يصعب حلها تحليليًا.
+                </p>
+              </div>
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  درست التحليل الحقيقي لفهم خصائص الدوال الحقيقية مثل الاتصال، النهايات، الاشتقاق، والتكامل، مما يوفر
+                  أساسًا دقيقًا للرياضيات المتقدمة وتطبيقاتها.
+                </p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  التحليل المركب مكّنني من دراسة الدوال ذات المتغيرات العقدية، وهو مجال يُستخدم على نطاق واسع في
+                  الفيزياء والهندسة لحل المشكلات المعقدة.
+                </p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  تعلمت الجبر المجرد لفهم البنى الجبرية مثل الزُمر والحلقات والحقول، والتي تُستخدم في التشفير، علوم
+                  الحاسوب، ونظرية الأعداد.
+                </p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>
+                  اكتسبت مهارات في الرياضيات المتقطعة، والتي تركز على الهياكل المنفصلة مثل المجموعات، الرسوم البيانية،
+                  المنطق، والخوارزميات، وتُعدّ أساسًا في علوم الحاسوب.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <h2 class="section-title fade-in">خبرتي</h2>
+        <p class="section-subtitle fade-in">رحلتي المهنية</p>
+        <div class="timeline">
+          <div class="timeline-item fade-in" style="animation-delay: 0.2s;">
+            <div class="timeline-content">
+              <h3>محللة أعمال</h3>
+              <span>2024 - حاليًا</span>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>جمع وتحليل متطلبات الأعمال متعددة الوظائف بما يضمن توافقها مع الأهداف الاستراتيجية للمشاريع.</p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>تحويل متطلبات العمل التفصيلية إلى مواصفات فنية دقيقة وقابلة للتنفيذ من قبل فرق التطوير.</p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>العمل كحلقة وصل فعّالة بين أصحاب المصلحة من رجال الأعمال والفرق التقنية لتسهيل التواصل وتقليل التأخير
+                  في تنفيذ المشاريع.</p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>تعزيز التعاون بين الإدارات المختلفة، مما أسهم في تنفيذ المشاريع بكفاءة وتسليمها في الوقت المحدد.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="timeline-item fade-in" style="animation-delay: 0.4s;">
+            <div class="timeline-content">
+              <h3>عمل حر - مطورة ويب</h3>
+              <span>2022 - حالياً</span>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>بناء ودعم أنظمة الواجهة الخلفية باستخدام PHP (Laravel) لتحسين الأداء والموثوقية.</p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>تكامل واجهات برمجة التطبيقات وخدمات الدفع لتمكين معاملات مستخدم سلسة وآمنة.</p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>التعاون الوثيق مع المصممين لتحويل مفاهيم واجهة المستخدم وتجربة المستخدم إلى تطبيقات تفاعلية وسلسة.
+                </p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>تحسين كفاءة تحميل الوسائط لتعزيز سرعة الموقع وتحسين تجربة المستخدم.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="timeline-item fade-in" style="animation-delay: 0.6s;">
+            <div class="timeline-content">
+              <h3>مساعدة مدرب</h3>
+              <span>2021 - 2023</span>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>دعم المدربين في الإجابة على استفسارات المتدربين وتقديم التوضيحات اللازمة.</p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>مراجعة وتقييم الواجبات والمشاريع الطلابية، وتقديم ملاحظات بنّاءة تساعد في تحسين الأداء الأكاديمي.</p>
+              </div>
+
+              <div class="timeline-line">
+                <span class="timeline-marker"></span>
+                <p>التعاون مع المدربين للحفاظ على جودة المحتوى التدريبي وضمان تفاعل الطلاب طوال فترة التعلم.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="technical" class="technical section">
+      <div class="container">
+        <h2 class="section-title fade-in" style="animation-delay: 0.2s;">مهاراتي التقنية</h2>
+        <p class="section-subtitle fade-in" style="animation-delay: 0.4s;">التقنيات التي تعاملت معها</p>
+        <div class="scroller" data-speed="slow" data-direction="left">
+          <ul class="tag-list scroller_inner">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java script</li>
+            <li>jQuery</li>
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>Animation</li>
+            <li>Bootstrap</li>
+            <li>Tailwind</li>
+            <li>Linux</li>
+            <li>Hadoop</li>
+            <li>Hive</li>
+            <li>SAS</li>
+            <li>Python</li>
+            <li>Vue.js</li>
+            <li>Chart.js</li>
+            <li>MySql</li>
+            <li>Virtual host</li>
+            <li>Digital ocean</li>
+            <li>Composer</li>
+            <li>Vite</li>
+            <li>Xammp</li>
+            <li>NPM</li>
+            <li>Num py</li>
+            <li>Sklearn</li>
+            <li>Pandas</li>
+            <li>Matplotlib</li>
+            <li>Transflow</li>
+            <li>Canva</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <h2 class="section-title fade-in">مشاريعي</h2>
+        <p class="section-subtitle fade-in">عرض لأبرز المشاريع التي عملت عليها </p>
+        <div class="projects-grid">
+          <!-- Completed Project Card -->
+          <div class="project-card fade-in" style="animation-delay: 0.2s;">
+            <div class="project-image">
+              <img src="img/stemnt.png" alt="تحليل المشاعر عملاء سيفورا" >
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link">عرض مباشر (قريبا)</a>
+                  <a href="#" class="project-link">(قريبا) GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">تحليل المشاعر عملاء سيفورا</h3>
+              <p class="project-description">
+                يهدف المشروع إلى تطوير نموذج ذكي لتحليل مراجعات المستخدمين وتحديد ما إذا كانت المشاعر إيجابية أو سلبية،
+                باستخدام تقنيات معالجة اللغة الطبيعية (NLP) ونماذج التعلم العميق مثل LSTM وCNN.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">CNN</span>
+                <span class="tech-tag">LSTM</span>
+                <span class="tech-tag">التعلم العميق</span>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Coming Soon Project Card 1 -->
+          <div class="project-card fade-in" style="animation-delay: 0.2s;">
+            <div class="project-image">
+              <!-- <img src=""
+                alt=""> -->
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">عرض مباشر (قريبا)</a>
+                  <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">GitHub (قريبا)</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">التنبؤ بالطقس</h3>
+              <p class="project-description">
+                يهدف المشروع إلى تطوير نموذج تنبؤي لحالة الطقس المستقبلية اعتمادًا على بيانات الأرصاد الجوية، باستخدام
+                خوارزميات تعلم الآلة مثل الانحدار اللوجستي، الغابة العشوائية، وXGBoost لتحليل العوامل المناخية كدرجة
+                الحرارة والرطوبة وسرعة الرياح.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Logistic Regression</span>
+                <span class="tech-tag">Random Forest</span>
+                <span class="tech-tag">XGBoost</span>
+                <span class="tech-tag">التنبؤ</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coming Soon Project Card 2 -->
+          <div class="project-card fade-in" style="animation-delay: 0.6s;">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <p>قريبا</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">قريبا</h3>
+              <p class="project-description">
+                المزيد من الحلول المبتكرة والأعمال الإبداعية في الأفق.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 class="section-title fade-in" style="animation-delay: 0.2s;">تواصل معي</h2>
+        <p class="section-subtitle fade-in" style="animation-delay: 0.2s;">
+          تحدَّث حتى أراك
+        </p>
+        <div class="contact-content">
+          <p class="contact-text fade-in" style="animation-delay: 0.4s;">
+            يسعدني دائمًا التعاون في مشاريع جديدة ومبتكرة. لا تتردد في التواصل لنبني معًا قصة نجاح مميزة.
+          </p>
+        </div>
+        <div class="contact-links fade-in" style="animation-delay: 0.4s;">
+          <a href="mailto:shaimabinhamdan@gmail.com" class="social-link" title="Email" aria-label="Email"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="tel:+966592639388" class="social-link" title="phone" aria-label="phone" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <a href="https://t.me/shaimahamdan" class="social-link" title="telegram" aria-label="telegram" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://github.com/ShaimaHamdan" class="social-link" title="GitHub" aria-label="GitHub"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send/?phone=%2B966592639388&text&type=phone_number&app_absent=0"
+            class="social-link" title="واتساب" aria-label="واتساب" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shaimahamdan/" class="social-link" title="linkedin" aria-label="linkedin"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    style="padding: 40px 0; text-align: center; border-top: 1px solid var(--border-color); background: var(--dark-bg);">
+    <div class="container">
+      <p style="opacity: 0.7;">
+        صُنع بشغف من شيماء 2025 &copy</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Example: Defer non-critical JS -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>
