@@ -419,11 +419,11 @@ animation: slideInRight 1s ease-out forwards;
 }
 
 .scroller[data-speed="fast"] {
-    --_animation-duration: 8s;
+    --_animation-duration: 10s;
 }
 
 .scroller[data-speed="slow"] {
-    --_animation-duration: 10s;
+    --_animation-duration: 20s;
 }
 
 @keyframes scroll {
