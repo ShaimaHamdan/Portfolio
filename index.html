@@ -1,0 +1,561 @@
+<!DOCTYPE html>More actions
+<html lang='ar' dir='rtl' class='scroll-smooth'>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ملفي الشخصي - مطور ويب متكامل يعرض المشاريع والخبرة العملية وحلول مبتكرة." />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <title>شيماء</title>
+    <link rel="icon" href="img/shaima48x48.svg" type="image/svg+xml" />
+    <link rel="icon" href="img/shaima150x150.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="img/shaima100x100.png" type="image/png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel='stylesheet' href='styling/style.css' media='print' onload='this.media="all"'>
+    <noscript>
+        <link rel='stylesheet' href='styling/style.css'>
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="text-gray-800">
+
+
+    <!-- Loading Screen -->
+    <div id='loadingScreen' class='loading-screen fixed inset-0 bg-gray-50 flex items-center justify-center z-[10000]'>
+        <div class='loader' aria-hidden='true'></div>
+    </div>
+    <!-- Header/Navigation -->
+    <header class='fixed w-full top-0 z-50 bg-white shadow-sm'>
+        <nav class='container mx-auto px-4 py-3'>
+            <nav class='container mx-auto px-12 py-3'>
+                <div class='flex items-center justify-between md:justify-start gap-8'>
+                    <!-- Logo with explicit dimensions -->
+                    <div class='flex-shrink-0'>
+                        <img src='img/shaimalogo100x250.svg' alt='شيماء حمدان' width='250' height='100'
+                            class='w-24 sm:w-32 md:w-40 lg:w-48 h-auto' loading='eager'>
+                    </div>
+                    <!-- Navigation Links -->
+                    <div class='hidden md:flex items-center space-x-reverse space-x-6 text-sm font-medium'>
+                        <a href='#about' class='text-xl hover:text-[#174349] transition-colors px-2'>من أنا</a>
+                        <a href='#education' class='text-xl hover:text-[#174349] transition-colors px-2'>تعليمي</a>
+                        <a href='#experience' class='text-xl hover:text-[#174349] transition-colors px-2'>خبرتي</a>
+                        <a href='#projects' class='text-xl hover:text-[#174349] transition-colors px-2'>مشاريعي</a>
+                        <a href='#contact' class='text-xl hover:text-[#174349] transition-colors px-2'>تواصل معي</a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id='menuButton' class='md:hidden text-gray-800 focus:outline-none relative w-6 h-6 mr-auto'>
+                        <!-- Hamburger Icon -->
+                        <svg id='hamburgerIcon' class='menu-icon absolute inset-0 w-6 h-6' fill='none'
+                            stroke='currentColor' viewBox='0 0 24 24'>
+                            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2'
+                                d='M4 6h16M4 12h16M4 18h16'></path>
+                        </svg>
+                        <!-- X Icon -->
+                        <svg id='closeIcon' class='menu-icon absolute inset-0 w-6 h-6 opacity-0' fill='none'
+                            stroke='currentColor' viewBox='0 0 24 24'>
+                            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2'
+                                d='M6 18L18 6M6 6l12 12'></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile Menu -->
+                <div id='mobileMenu' class='md:hidden'>
+                    <div class='flex  flex-col items-center space-y-4 py-4'>
+                        <a href='#about' class='mobile-link hover:text-[#174349] transition-colors'>من أنا</a>
+                        <a href='#education' class='mobile-link hover:text-[#174349] transition-colors'>تعليمي</a>
+                        <a href='#experience' class='mobile-link hover:text-[#174349] transition-colors'>خبرتي</a>
+                        <a href='#projects' class='mobile-link hover:text-[#174349] transition-colors'>مشاريعي</a>
+                        <a href='#contact' class='mobile-link hover:text-[#174349] transition-colors'>تواصل معي</a>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">مرحبا بكم في ملفي الشخصي</h1>
+            <p class="hero-subtitle">
+                معك شيماء
+                <span class="typing">
+                    <span id="text"></span>
+                    <span class="cursor"></span>
+                </span>
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">مشاريعي</a>
+                <a href="#contact" class="btn-primary">تواصل معي</a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="relative py-20 fade-up">
+        <div class="container mx-auto px-12">
+            <h2 class="text-3xl font-bold text-center mb-4">من أنا</h2>
+            <p class="text-xl text-center text-gray-600 mb-12">
+                شغوفة بدمج البرمجة والتحليل والتقنية لابتكار حلول وتجارب رقمية
+            </p>
+
+            <!-- Grid container -->
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto relative">
+                <!-- Text content -->
+                <div class="relative p-4 z-10">
+                    <!-- Gradient background -->
+                    <div class="absolute inset-0 bg-gradient-to-br via-transparent to-pink-100/80 rounded-3xl"></div>
+
+                    <!-- about me-->
+                    <div class="relative">
+                        <p class="text-lg leading-[2] text-gray-600 mb-8">
+                            مطوّرة ويب ومحلّلة بيانات شغوفة بتعلّم كل جديد. أؤمن أن التعليم، والتجربة، والمشاركة هي
+                            مفاتيح حقيقية لصناعة التغيير في المجتمع. أستمتع بخوض التحديات البرمجية وحلّها ذاتيًا، وأسعى
+                            دائمًا إلى تطوير مهاراتي وإبراز أفضل ما لدي. أطمح لأن أصبح عالمة بيانات تترك أثرًا ملموسًا
+                            في هذا المجال، وفي مجالات أخرى. أحب التفكير العميق، ومشاركة المعرفة، وصنع فرق حقيقي في حياة
+                            من حولي. أؤمن بأهمية المصادر المفتوحة، وأتمنى أن أكون من بين المساهمين في تحسينها وتوسيع
+                            أثرها.
+
+                            وأرى نفسي "خوارزمية" تتعلم وتتطور باستمرار، تجمع بين دقّة وجمال الرياضيات وروح البرمجة،
+                            وتسعى دائمًا نحو حلول مبتكرة وفعالة.
+                        </p>
+                    </div>
+                </div>
+                <!-- Floating shapes -->
+                <div class="absolute inset-0 lg:relative h-full z-0 pointer-events-none">
+                    <div class="absolute w-[300px] h-[300px] rounded-full bg-[#174349]/30 blur-[50px]
+                top-[-10%] left-[10%]"></div>
+                    <div class="absolute w-[250px] h-[250px] rounded-full bg-[#d90df1]/20 blur-[30px]
+                top-[30%] right-[10%]"></div>
+                    <div class="absolute w-[200px] h-[200px] rounded-full bg-[#0088ff]/30 blur-[22px]
+                bottom-[10%] left-[20%]"></div>
+                </div>
+
+
+
+                <!-- Placeholder للمحافظة على التوازن في الشاشات الكبيرة -->
+                <div class="hidden lg:block"></div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- education -->
+    <section id='education' class='py-20 bg-gray-50 fade-up'>
+        <div class='container mx-auto px-4'>
+            <h2 class='text-3xl font-bold text-center mb-4'>تعليمي</h2>
+            <p class='text-xl text-center text-gray-600 mb-16'>رحلتي الأكاديمية</p>
+            <div class='max-w-4xl mx-auto space-y-12'>
+                <!-- Masters Degree -->
+                <div style='animation-delay: 0.2s;'>
+                    <div class=' p-3 '>
+                        <h3 class='text-2xl font-bold mb-2'>ماجستير علوم البيانات وتحليلها</h3>
+                        <span class='block text-gray-600 mb-6'>جامعة جدة | 2024 - 2026</span>
+                        <!-- Timeline items -->
+                        <div class='space-y-6'>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    اكتسبت خبرة واسعة في الإحصاءات والتقنيات الكمية، التي تُعدّ أساسًا لتحليل البيانات
+                                    واتخاذ قرارات دقيقة مبنية على الأدلة، مما يساعد في التنبؤ بالمستقبل وتقليل المخاطر.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    تعلمت كيفية إعداد البيانات ومعالجتها لتنظيف وتنظيم وتحويل البيانات الخام إلى صيغة
+                                    مناسبة للتحليل، مما يسهم في تحسين دقة القرارات.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    استخدام التعلم الآلي لبناء نماذج تنبؤية تتيح اتخاذ قرارات تلقائية من خلال تحليل
+                                    البيانات واكتشاف الأنماط.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    العمل مع البيانات الضخمة لتحليل كميات هائلة ومتنوعة من البيانات بسرعة عالية،
+                                    واستخلاص رؤى دقيقة تدعم اتخاذ القرار في الوقت الفعلي.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    فهم وتطبيق تقنيات معالجة اللغة الطبيعية (NLP) التي تساعد الحواسيب على تفسير وتحليل
+                                    اللغة البشرية المكتوبة والمنطوقة لتحسين التفاعل بين الإنسان والآلة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bachelors Degree -->
+                <div style='animation-delay: 0.4s;'>
+                    <div class=' p-3 '>
+                        <h3 class='text-2xl font-bold mb-2'>بكالوريوس الرياضيات</h3>
+                        <span class='block text-gray-600 mb-6'>جامعة جدة | 2015 - 2020</span>
+                        <!-- Timeline items -->
+                        <div class='space-y-6'>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    تعلمت المعادلات التفاضلية والتكاملية، التي تُستخدم في وصف التغيرات الديناميكية
+                                    والنماذج الفيزيائية والهندسية، وتحليل الظواهر المستمرة في الزمن أو المكان.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    تعلمت التحليل العددي لتقريب حلول المعادلات الرياضية والمشكلات التي يصعب حلها
+                                    تحليليًا.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    درست التحليل الحقيقي لفهم خصائص الدوال الحقيقية مثل الاتصال، النهايات، الاشتقاق،
+                                    والتكامل، مما يوفر أساسًا دقيقًا للرياضيات المتقدمة وتطبيقاتها.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    التحليل المركب مكّنني من دراسة الدوال ذات المتغيرات العقدية، وهو مجال يُستخدم على
+                                    نطاق واسع في الفيزياء والهندسة لحل المشكلات المعقدة.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    تعلمت الجبر المجرد لفهم البنى الجبرية مثل الزُمر والحلقات والحقول، والتي تُستخدم في
+                                    التشفير، علوم الحاسوب، ونظرية الأعداد.
+                                </p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>
+                                    اكتسبت مهارات في الرياضيات المتقطعة، والتي تركز على الهياكل المنفصلة مثل المجموعات،
+                                    الرسوم البيانية، المنطق، والخوارزميات، وتُعدّ أساسًا في علوم الحاسوب.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- experience -->
+    <section id='experience' class='py-20 bg-gray-50 fade-up'>
+        <div class='container mx-auto px-4'>
+            <h2 class='text-3xl font-bold text-center mb-4'>خبرتي</h2>
+            <p class='text-xl text-center text-gray-600 mb-16'>رحلتي المهنية</p>
+            <div class='max-w-4xl mx-auto space-y-12'>
+                <!-- Business Analyst -->
+                <div style='animation-delay: 0.2s;'>
+                    <div class='p-3'>
+                        <h3 class='text-2xl font-bold mb-2'>محللة أعمال</h3>
+                        <span class='block text-gray-600 mb-6'>2024 - حاليًا</span>
+                        <div class='space-y-6'>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>جمع وتحليل متطلبات الأعمال متعددة الوظائف بما
+                                    يضمن توافقها مع الأهداف الاستراتيجية للمشاريع.</p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>تحويل متطلبات العمل التفصيلية إلى مواصفات فنية
+                                    دقيقة وقابلة للتنفيذ من قبل فرق التطوير.</p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>العمل كحلقة وصل فعّالة بين أصحاب المصلحة من
+                                    رجال الأعمال والفرق التقنية لتسهيل التواصل وتقليل التأخير في تنفيذ المشاريع.</p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>تعزيز التعاون بين الإدارات المختلفة، مما أسهم
+                                    في تنفيذ المشاريع بكفاءة وتسليمها في الوقت المحدد.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Freelance Web Developer -->
+                <div style='animation-delay: 0.4s;'>
+                    <div class='p-3'>
+                        <h3 class='text-2xl font-bold mb-2'>عمل حر - مطورة ويب</h3>
+                        <span class='block text-gray-600 mb-6'>2022 - حالياً</span>
+                        <div class='space-y-6'>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>بناء ودعم أنظمة الواجهة الخلفية باستخدام PHP
+                                    (Laravel) لتحسين الأداء والموثوقية.</p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>تكامل واجهات برمجة التطبيقات وخدمات الدفع
+                                    لتمكين معاملات مستخدم سلسة وآمنة.</p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>التعاون الوثيق مع المصممين لتحويل مفاهيم واجهة
+                                    المستخدم وتجربة المستخدم إلى تطبيقات تفاعلية وسلسة.</p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>تحسين كفاءة تحميل الوسائط لتعزيز سرعة الموقع
+                                    وتحسين تجربة المستخدم.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Training Assistant -->
+                <div style='animation-delay: 0.6s;'>
+                    <div class='p-3'>
+                        <h3 class='text-2xl font-bold mb-2'>مساعدة مدرب</h3>
+                        <span class='block text-gray-600 mb-6'>2021 - 2023</span>
+                        <div class='space-y-6'>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>دعم المدربين في الإجابة على استفسارات المتدربين
+                                    وتقديم التوضيحات اللازمة.</p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>مراجعة وتقييم الواجبات والمشاريع الطلابية،
+                                    وتقديم ملاحظات بنّاءة تساعد في تحسين الأداء الأكاديمي.</p>
+                            </div>
+                            <div class='relative flex items-start gap-6'>
+                                <div class='w-4 h-4 rounded-full flex-shrink-0 mt-2'
+                                    style='background: linear-gradient(135deg, #174349 0%, #217278 100%);'></div>
+                                <p class='text-gray-700 leading-relaxed'>التعاون مع المدربين للحفاظ على جودة المحتوى
+                                    التدريبي وضمان تفاعل الطلاب طوال فترة التعلم.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Technical Skills -->
+    <section id='technical'
+        class='py-32 relative overflow-hidden bg-gradient-to-br from-indigo-50/30 to-purple-50/30 fade-up'>
+        <div class='container mx-auto px-4'>
+            <h2 class='text-3xl font-bold text-center mb-4'>مهاراتي التقنية</h2>
+            <p class='text-xl text-center text-gray-600 mb-16'>التقنيات التي تعاملت معها</p>
+
+            <!-- Scroller with data-speed="fast" and data-direction="right" -->
+            <div class="scroller mx-auto" data-speed="fast" data-direction="left">
+                <ul class="tag-list scroller_inner">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>Animation</li>
+                    <li>Bootstrap</li>
+                    <li>Tailwind</li>
+                    <li>Linux</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- project section -->
+    <section id='projects' class='projects section py-32 bg-gray-50 fade-up'>
+        <div class='container mx-auto px-4'>
+            <h2 class='section-title text-3xl font-bold text-center mb-4 '>مشاريعي</h2>
+            <p class='section-subtitle text-xl text-center text-gray-600 mb-16 '>مشاريع مختارة من أعمالي السابقة</p>
+            <div class='projects-grid'>
+                <!-- Completed Project Card -->
+                <div class='project-card '>
+                    <div class='project-image'>
+                        <img src='img/stemnt.png' alt='تحليل المشاعر عملاء سيفورا'>
+                        <div class='project-overlay'>
+                            <div class='project-links'>
+                                <a href='#' class='project-link'>عرض مباشر (قريبا)</a>
+                                <a href='#' class='project-link'>(قريبا) GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='project-content'>
+                        <h3 class='project-title'>تحليل المشاعر عملاء سيفورا</h3>
+                        <p class='project-description'>
+                            يهدف المشروع إلى تطوير نموذج ذكي لتحليل مراجعات المستخدمين وتحديد ما إذا كانت المشاعر
+                            إيجابية أو سلبية،
+                            باستخدام تقنيات معالجة اللغة الطبيعية (NLP) ونماذج التعلم العميق مثل LSTM وCNN.
+                        </p>
+                        <div class='project-tech'>
+                            <span class='tech-tag'>Python</span>
+                            <span class='tech-tag'>CNN</span>
+                            <span class='tech-tag'>LSTM</span>
+                            <span class='tech-tag'>التعلم العميق</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Project Card 1 -->
+                <div class='project-card '>
+                    <div class='project-image'>
+                        <div class='project-overlay'>
+                            <div class='project-links'>
+                                <a href='#' class='project-link' target='_blank' rel='noopener noreferrer'>عرض مباشر
+                                    (قريبا)</a>
+                                <a href='#' class='project-link' target='_blank' rel='noopener noreferrer'>GitHub
+                                    (قريبا)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='project-content'>
+                        <h3 class='project-title'>التنبؤ بالطقس</h3>
+                        <p class='project-description'>
+                            يهدف المشروع إلى تطوير نموذج تنبؤي لحالة الطقس المستقبلية اعتمادًا على بيانات الأرصاد
+                            الجوية، باستخدام
+                            خوارزميات تعلم الآلة مثل الانحدار اللوجستي، الغابة العشوائية، وXGBoost لتحليل العوامل
+                            المناخية كدرجة
+                            الحرارة والرطوبة وسرعة الرياح.
+                        </p>
+                        <div class='project-tech'>
+                            <span class='tech-tag'>Python</span>
+                            <span class='tech-tag'>Logistic Regression</span>
+                            <span class='tech-tag'>Random Forest</span>
+                            <span class='tech-tag'>XGBoost</span>
+                            <span class='tech-tag'>التنبؤ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Project Card 2 -->
+                <div class='project-card'>
+                    <div class='project-image'>
+                        <div class='project-overlay'>
+                            <div class='project-links'>
+                                <p>قريبا</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='project-content'>
+                        <h3 class='project-title'>قريبا</h3>
+                        <p class='project-description'>
+                            المزيد من الحلول المبتكرة والأعمال الإبداعية في الأفق.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- contact section -->
+    <section id='contact' class='py-32 bg-gradient-to-br from-[#4FACFE]/[0.03] to-[#667EEA]/[0.03] fade-up'>
+        <div class='container mx-auto px-4'>
+            <h2 class='text-3xl font-bold text-center mb-4'>تواصل معي</h2>
+            <p class='text-xl text-center text-gray-600 mb-16'>تحدَّث حتى أراك</p>
+            <div class='max-w-2xl mx-auto text-center mb-12'>
+                <p class='text-xl text-gray-700/90 leading-relaxed'>
+                    يسعدني دائمًا التعاون في مشاريع جديدة ومبتكرة. لا تتردد في التواصل لنبني معًا قصة نجاح مميزة.
+                </p>
+            </div>
+            <div class='flex justify-center flex-wrap gap-5'>
+                <a href='mailto:shaimabinhamdan@gmail.com'
+                    class='w-[50px] h-[50px] bg-white border border-gray-200/50 rounded-full flex items-center justify-center text-gray-700 backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-br hover:from-[#174349] hover:to-[#217278] hover:text-white group'
+                    title='Email' aria-label='Email' target='blank' rel='noopener noreferrer'>
+                    <i class='fa-solid fa-envelope text-xl transition-colors duration-300'></i>
+                </a>
+                <a href='tel:+966592639388'
+                    class='w-[50px] h-[50px] bg-white border border-gray-200/50 rounded-full flex items-center justify-center text-gray-700 backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-br hover:from-[#174349] hover:to-[#217278] hover:text-white'
+                    title='phone' aria-label='phone' target='blank' rel='noopener noreferrer'>
+                    <i class='fa-solid fa-phone text-xl transition-colors duration-300'></i>
+                </a>
+                <a href='https://t.me/shaimahamdan'
+                    class='w-[50px] h-[50px] bg-white border border-gray-200/50 rounded-full flex items-center justify-center text-gray-700 backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-br hover:from-[#174349] hover:to-[#217278] hover:text-white'
+                    title='telegram' aria-label='telegram' target='blank' rel='noopener noreferrer'>
+                    <i class='fa-brands fa-telegram text-xl transition-colors duration-300'></i>
+                </a>
+                <a href='https://github.com/ShaimaHamdan'
+                    class='w-[50px] h-[50px] bg-white border border-gray-200/50 rounded-full flex items-center justify-center text-gray-700 backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-br hover:from-[#174349] hover:to-[#217278] hover:text-white'
+                    title='GitHub' aria-label='GitHub' target='blank' rel='noopener noreferrer'>
+                    <i class='fa-brands fa-github text-xl transition-colors duration-300'></i>
+                </a>
+                <a href='https://api.whatsapp.com/send/?phone=%2B966592639388&text&type=phone_number&app_absent=0'
+                    class='w-[50px] h-[50px] bg-white border border-gray-200/50 rounded-full flex items-center justify-center text-gray-700 backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-br hover:from-[#174349] hover:to-[#217278] hover:text-white'
+                    title='واتساب' aria-label='واتساب' target='blank' rel='noopener noreferrer'>
+                    <i class='fa-brands fa-whatsapp text-xl transition-colors duration-300'></i>
+                </a>
+                <a href='https://www.linkedin.com/in/shaimahamdan/'
+                    class='w-[50px] h-[50px] bg-white border border-gray-200/50 rounded-full flex items-center justify-center text-gray-700 backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-br hover:from-[#174349] hover:to-[#217278] hover:text-white'
+                    title='linkedin' aria-label='linkedin' target='blank' rel='noopener noreferrer'>
+                    <i class='fa-brands fa-linkedin text-xl transition-colors duration-300'></i>
+                </a>
+                <a href='https://x.com/shaima_3h'
+                    class='w-[50px] h-[50px] bg-white border border-gray-200/50 rounded-full flex items-center justify-center text-gray-700 backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-br hover:from-[#174349] hover:to-[#217278] hover:text-white'
+                    title='twitter' aria-label='twitter' target='blank' rel='noopener noreferrer'>
+                    <i class='fa-brands fa-x-twitter text-xl transition-colors duration-300'></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class='py-10 text-center border-t border-gray-200/20 bg-gray-50'>
+        <div class='container mx-auto px-4'>
+            <p class='text-gray-600/70'>
+                صُنع بشغف من شيماء 2025 &copy;
+            </p>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+    <script>
+        // Critical JavaScript for initial page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadingScreen = document.getElementById('loadingScreen');
+            window.addEventListener('load', () => {
+                loadingScreen.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
