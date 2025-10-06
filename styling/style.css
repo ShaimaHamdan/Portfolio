@@ -613,3 +613,8 @@ animation: slideInRight 1s ease-out forwards;
   opacity: 1;
   transform: translateY(0);
 }
+.text-3xl{
+font-size:1.875rem;
+line-height:3.25rem;
+
+}
